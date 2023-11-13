@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.css">
+</head>
+<style>
+    #closeIn{
+        display: none;
+    }
+</style>
+<body>
+    <center>
+        <h1 class="bg-success text-light ms-4 me-4">SCHOOL REGISTER</h1>
+    </center>
+    <div class="d-grid gap-2 m-3">
+        <button  class="btn btn-outline-info" onclick="dropname()" id="drop">drop</button>
+    </div>
+    <div class="d-grid gap-2 m-3">
+        <button class="btn btn-outline-info" onclick="closename()" id="closeIn">close</button>
+    </div>
+    <div class="d-flex p-2 flex-wrap" id="show" ></div>
+    <script>
+
+        const dropname =() =>{
+            drop.style.display = "none"
+            closeIn.style.display = "block"
+            class school {
+            constructor (cname, age, colour, nclass, gender) {
+                this.cname = cname,
+                this.age = age,
+                this.colour = colour,
+                this.nclass = nclass,
+                this.gender = gender
+            }
+        }
+
+        
+        let opeyemi = new school ("Opeyemi", 24, "Blue", "400L", "Female")
+        let christianah = new school ("Christianah", 18, "Pink", "100L", "Female")
+        let david = new school ("David", 25, "Red", "600L", "Male")
+        let seun = new school ("Seun", 24, "Yellow", "200L", "Male")
+        let joshua = new school ("Joshua", 21, "Black", "200L", "Male")
+        let gaius = new school ("Gaius", 22, "White", "200L", "Male")
+        let funmilola = new school ("Funmilola", 24, "Skyblue", "600L", "Female")
+        let peter = new school ("Peter", 16, "Orange", "100L", "Male")
+        let olaitan = new school ("Olaitan", 26, "Babypink", "600L", "Female")
+        let femi = new school ("Femi", 20, "Brown", "300L", "Male")
+        let omotolashe = new school ("Omotolashe", 19, "Indianred", "200L", "Female")
+        let blessing = new school ("Blessing", 22, "Cyan", "400L", "Female")
+        let adebayo = new school ("Adebayo", 29, "Onionred", "200L", "Male")
+        let monday = new school ("Monday", 24, "Mageta", "500L", "Male")
+        let aisha = new school ("Aisha", 18, "Gold", "100L", "Female")
+
+
+
+        
+
+
+
+        let Arr = [opeyemi,christianah,david,seun,joshua,gaius,funmilola,peter,olaitan,femi,omotolashe,blessing,adebayo,monday,aisha]
+        Arr.push()
+        Arr.map((tod, ind)=>{
+            show.innerHTML += `
+            <div class="m-1">
+                <div class="card" style="width: 18rem;">
+                <div class="card-header bg-danger">
+                ${ind +1}
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item bg-warning">Name = ${tod.cname}</li>
+            <li class="list-group-item bg-warning">Age = ${tod.age}</li>
+            <li class="list-group-item bg-warning">Colour = ${tod.colour}</li>
+            <li class="list-group-item bg-warning">Class = ${tod.nclass}</li>
+            <li class="list-group-item bg-warning">Gender = ${tod.gender}</li>
+            </ul>
+            </div>
+            </div>
+            `
+
+        })
+
+
+        }
+            
+
+        const closename = () => {
+            drop.style.display = "block"
+            closeIn.style.display = "none"
+            show.innerHTML = ""
+        }
+
+    </script>
+</body>
+</html>
